@@ -1,0 +1,52 @@
+name: build
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+      - name: Use Node.js
+      - name: Get Yarn Cache Directory Path
+        id: yarn-cache-dir-path
+      - name: Cache node_modules
+      - name: Install npm
+  await-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Make fail if the lint workflow was failed
+        id: await_lint
+        if: ${{ github.event.workflow_run.conclusion != 'success' }}
+        run: |
+          echo '::error::lint workflow was failed'
+          exit 1
+  test:
+    runs-on: ubuntu-latest
+    needs:
+      - install
+    steps:
+      - name: Run Unit, Integration, and Snapshot Test with Coverage
+      - name: Run E2E and Snapshot Test
+      - name: Check Code Coverage
+      - name: Upload Test Coverage as Artifact
+      - name: Upload Test Coverage to Codecov
+  pre-deploy:
+    runs-on: ubuntu-latest
+    needs:
+      - install
+      - await-lint
+      - test
+    steps:
+      - run: |
+          echo 'dummy'
+  deploy:
+    runs-on: ubuntu-latest
+    needs:
+      - pre-deploy
+    steps:
+      - name: Build a Project
+      - name: Create a Release
+      - name: Deploy to Production

@@ -1,0 +1,31 @@
+name: lint
+on:
+  - pull_request
+  - push
+
+jobs:
+  pre-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+      - name: Use Node.js
+      - name: Get Yarn Cache Directory Path
+        id: yarn-cache-dir-path
+      - name: Cache node_modules
+      - name: Install npm
+  lint:
+    runs-on: ubuntu-latest
+    needs:
+      - pre-lint
+    steps:
+      - name: Check Type
+      - name: Check Code Format
+      - name: Link Code
+  lint-mince:
+    runs-on: ubuntu-latest
+    needs:
+      - pre-lint
+    steps:
+      - name: Lint Markdown
+      - name: Lint Config
+      - name: Lint Commit
