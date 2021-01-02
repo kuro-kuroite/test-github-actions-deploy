@@ -25,7 +25,11 @@ jobs:
             ${{ runner.os }}-yarn-
       - name: Install npm
         run: |
-            yarn --frozen-lockfile
+          yarn --frozen-lockfile
+      - name: debug
+        run: |
+          pwd
+          ls
   pre-lint:
     runs-on: ubuntu-latest
     needs:
@@ -40,7 +44,6 @@ jobs:
     steps:
       - name: debug
         run: |
-          pwd
           ls
       - name: Check Type
         run: |
