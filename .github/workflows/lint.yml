@@ -38,6 +38,10 @@ jobs:
     needs:
       - pre-lint
     steps:
+      - name: debug
+        run: |
+          pwd
+          ls
       - name: Check Type
         run: |
           npm run ci:check:type
