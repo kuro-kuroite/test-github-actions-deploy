@@ -4,16 +4,16 @@ on:
     workflows:
       - lint
       - build
+      - lighthouse
+    branches:
+      - main
     types:
       - completed
 
 jobs:
   create:
     runs-on: ubuntu-latest
-    needs:
-      - install
-      - await-lint
-      - test
+    if: github.event.pull_request.merged == true
     steps:
       - name: Create Issue
         run: |
