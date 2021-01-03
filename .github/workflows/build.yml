@@ -9,9 +9,18 @@ on:
       - completed
 
 jobs:
-  install:
+  await-lint:
     runs-on: ubuntu-latest
     steps:
+      - name: Make fail if the lint workflow was failed
+        if: ${{ github.event.workflow_run.conclusion != 'success' }}
+        run: |
+          echo '::error::lint workflow was failed'
+          exit 1
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      # install
       - name: Checkout
         uses: actions/checkout@v2
       - name: Use Node.js
@@ -31,19 +40,7 @@ jobs:
       - name: Install npm
         run: |
             yarn --frozen-lockfile
-  await-lint:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Make fail if the lint workflow was failed
-        if: ${{ github.event.workflow_run.conclusion != 'success' }}
-        run: |
-          echo '::error::lint workflow was failed'
-          exit 1
-  test:
-    runs-on: ubuntu-latest
-    needs:
-      - install
-    steps:
+      # test
       - name: Run Unit, Integration, and Snapshot Test with Coverage
         run: |
           npm run test -- --coverage
@@ -59,22 +56,34 @@ jobs:
       - name: Upload Test Coverage to Codecov
         run: |
           echo 'Upload Test Coverage to Codecov'
-  pre-deploy:
-    if: github.event.pull_request.merged == true
-    runs-on: ubuntu-latest
-    needs:
-      - install
-      - await-lint
-      - test
-    steps:
-      - run: |
-          echo 'dummy'
   deploy:
     if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     needs:
-      - pre-deploy
+      - await-lint
+      - test
     steps:
+      # install
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: "14"
+      - name: Get Yarn Cache Directory Path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+      - name: Cache node_modules
+        uses: actions/cache@v2
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+      - name: Install npm
+        run: |
+            yarn --frozen-lockfile
+      # deploy
       - name: Build a Project
         run: |
           npm run build
