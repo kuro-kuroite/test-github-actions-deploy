@@ -9,7 +9,7 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "rome bundle index.ts dist/",
-    "ci:check:format": "rome check --format-only",
+    "ci:check:format": "rome check",
     "ci:check:type": "tsc -p . --noEmit",
     "fix": "rome check --apply",
     "postinstall": "npx patch-package && npx typesync",
