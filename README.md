@@ -1,2 +1,7 @@
+<!-- textlint-disable spellcheck-tech-word -->
+
 # test-github-actions-deploy
-local環境で .github/workflows/*.yml 設定のテストができないため、サンドボックス環境として利用する
+
+<!-- textlint-enable spellcheck-tech-word -->
+
+local 環境で .github/workflows/\*.yml 設定のテストができないため、サンドボックス環境として利用する。
