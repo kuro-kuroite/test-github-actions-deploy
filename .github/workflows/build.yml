@@ -43,7 +43,7 @@ jobs:
       # test
       - name: Run Unit, Integration, and Snapshot Test with Coverage
         run: |
-          npm run test -- --coverage
+          echo 'Run Unit, Integration, and Snapshot Test with Coverage'
       - name: Run E2E and Snapshot Test
         run: |
           echo 'Run E2E and Snapshot Test'
