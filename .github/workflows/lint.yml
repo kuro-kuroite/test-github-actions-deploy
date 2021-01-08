@@ -1,12 +1,6 @@
 name: lint
 on:
-  push:
-    branches:
-      - main
-      - feature/*
-  pull_request:
-    types:
-      - synchronize
+  - push
 
 jobs:
   lint:
