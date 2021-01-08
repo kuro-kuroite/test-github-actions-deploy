@@ -13,7 +13,6 @@ on:
 jobs:
   create:
     runs-on: ubuntu-latest
-    if: github.event_name == 'push'
     steps:
       - name: Create Issue
         run: |
