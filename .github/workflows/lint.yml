@@ -1,7 +1,13 @@
 name: lint
 on:
-  - pull_request
-  - push
+  push:
+    branches:
+      - main
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
 
 jobs:
   lint:
