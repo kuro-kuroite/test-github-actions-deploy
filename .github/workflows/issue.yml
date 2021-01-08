@@ -16,4 +16,4 @@ jobs:
     steps:
       - name: Create Issue
         run: |
-          echo ${{ github.event.workflow_run }}
+          echo "${{ github.event.workflow_run }}"
