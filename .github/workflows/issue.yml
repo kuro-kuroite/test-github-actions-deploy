@@ -13,7 +13,6 @@ on:
 jobs:
   create:
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
     steps:
       - name: Create Issue if the Workflows was Failed
         if: github.event.workflow_run.conclusion != 'success'
