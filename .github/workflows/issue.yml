@@ -22,6 +22,6 @@ jobs:
           echo '::error::the workflows was success'
           echo 1
       - name: Create Issue
-        if: failure() && github.event.workflow_run.conclusion == 'success'
+        if: failure()
         run: |
           echo "Create Issue"
