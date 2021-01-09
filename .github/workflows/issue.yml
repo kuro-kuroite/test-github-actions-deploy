@@ -13,8 +13,9 @@ on:
 jobs:
   can-create:
     runs-on: ubuntu-latest
+    continue-on-error: true
     steps:
-      - name: Ignore Next Job if the Workflows Was Success
+      - name: Skip Next Job if the Workflows Was Success
         if: ${{ github.event.workflow_run.conclusion == 'success' }}
         run: |
           exit 1
