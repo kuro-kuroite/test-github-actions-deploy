@@ -11,22 +11,17 @@ on:
       - completed
 
 jobs:
-  can-create:
+  create:
     runs-on: ubuntu-latest
+    if: github.event.workflow_run.event == 'push'
     steps:
-      - name: Skip Next Job if the Workflows Was Success
+      - name: Skip Next Steps if the Workflows Was Success
         continue-on-error: true
         if: ${{ github.event.workflow_run.conclusion == 'success' }}
         run: |
           echo '::error::the workflows was success'
           echo 1
-  create:
-    runs-on: ubuntu-latest
-    if: failure() && github.event.workflow_run.event == 'push'
-    needs:
-      - can-create
-    steps:
       - name: Create Issue
+        if: failure() && github.event.workflow_run.conclusion == 'success'
         run: |
           echo "Create Issue"
-          echo 0
