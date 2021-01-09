@@ -15,9 +15,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Skip Next Job if the Workflows Was Success
+        continue-on-error: true
         if: ${{ github.event.workflow_run.conclusion == 'success' }}
         run: |
           echo '::error::the workflows was success'
+          echo 1
   create:
     runs-on: ubuntu-latest
     if: github.event.workflow_run.event == 'push'
@@ -27,3 +29,4 @@ jobs:
       - name: Create Issue
         run: |
           echo "Create Issue"
+          echo 0
