@@ -26,9 +26,6 @@ jobs:
       - name: Install Script
         run: |
           cd ./scripts/ && yarn --frozen-lockfile
-          ls ./build/
-          npm run build
-          which scripts
           cd ..
       - name: Install npm
         run: |
