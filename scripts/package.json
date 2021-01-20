@@ -13,7 +13,7 @@
     "dev": "pastel dev",
     "build": "pastel build",
     "prepare": "pastel build",
-    "postinstall": "npx typesync",
+    "postinstall": "npx typesync && npm run build",
     "serve": "node dist/index.js",
     "start": "ncc run src/index.ts --quiet"
   },
