@@ -8,15 +8,17 @@
   "author": "@kuro-kuroite",
   "main": "dist/index.js",
   "scripts": {
-    "build": "rome bundle index.ts dist/",
-    "ci:check:format": "rome check",
-    "ci:check:type": "tsc -p . --noEmit",
-    "fix": "rome check --apply",
-    "postinstall": "npx patch-package && npx typesync",
-    "lint": "rome check",
-    "serve": "node dist/index.js",
-    "start": "rome run index.ts",
-    "test": "rome test"
+		"build": "scripts build",
+    "ci:check:format": "scripts check",
+    "ci:check:type": "scripts checkType",
+    "fix": "scripts fix",
+    "postinstall": "scripts postInstall",
+    "prepare": "npm run script:build",
+    "lint": "scripts lint",
+    "script:build": "cd scripts && yarn build",
+    "serve": "scripts serve",
+    "start": "scripts start",
+    "test": "scripts test"
   },
   "devDependencies": {
     "patch-package": "^6.2.2",

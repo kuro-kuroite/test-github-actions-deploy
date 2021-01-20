@@ -26,6 +26,7 @@ jobs:
       - name: Install npm
         run: |
           yarn --frozen-lockfile
+          scripts --help
       # lint
       - name: Check Type
         run: |
