@@ -27,7 +27,9 @@ jobs:
         run: |
           yarn --frozen-lockfile
           ls node_modules/.bin
-          cat node_modules/.bin/scripts
+          ls node_modules/scripts
+          ls node_modules/scripts/build
+          cat node_modules/scripts/build/cli.js
           npx scripts
       # lint
       - name: Check Type
