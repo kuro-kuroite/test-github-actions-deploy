@@ -12,7 +12,7 @@
     "ci:check:format": "scripts check",
     "ci:check:type": "scripts checkType",
     "fix": "scripts fix",
-    "postinstall": "scripts postInstall",
+    "postinstall": "npx patch-package && npx typesync",
     "lint": "scripts lint",
     "serve": "scripts serve",
     "start": "scripts start",
