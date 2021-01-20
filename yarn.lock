@@ -5465,7 +5465,7 @@ scheduler@^0.18.0:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
 
-scripts@./scripts:
+"scripts@file:./scripts":
   version "0.1.0"
   dependencies:
     ink "^3.0.8"
