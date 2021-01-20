@@ -4,11 +4,11 @@
   "private": true,
   "description": ".github/workflows/*.yml のサンドボックス環境",
   "repository": "https://github.com/kuro-kuroite/test-github-actions-deploy.git",
-	"license": "MIT",
+  "license": "MIT",
   "author": "@kuro-kuroite",
   "main": "dist/index.js",
   "scripts": {
-		"build": "scripts build",
+    "build": "scripts build",
     "ci:check:format": "scripts check",
     "ci:check:type": "scripts checkType",
     "fix": "scripts fix",
@@ -22,6 +22,7 @@
     "patch-package": "^6.2.2",
     "postinstall-postinstall": "^2.1.0",
     "rome": "^10.0.4-beta",
+    "scripts": "./scripts",
     "typescript": "^4.1.3",
     "typesync": "^0.8.0"
   },

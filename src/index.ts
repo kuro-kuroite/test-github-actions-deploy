@@ -1,5 +1,5 @@
-import {name} from "./src/name";
-import {helloWorld} from "./src/helloWorld";
+import {name} from "./name";
+import {helloWorld} from "./helloWorld";
 
 async function main() {
 	console.log(helloWorld(name));
