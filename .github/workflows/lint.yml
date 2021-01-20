@@ -26,10 +26,12 @@ jobs:
       - name: Install Script
         run: |
           cd ./scripts/ && yarn --frozen-lockfile
+          yarn link
           cd ..
       - name: Install npm
         run: |
           yarn --frozen-lockfile
+          yarn link scripts
           npx scripts --help
       # lint
       - name: Check Type
