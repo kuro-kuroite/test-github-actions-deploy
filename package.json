@@ -22,7 +22,7 @@
     "patch-package": "^6.2.2",
     "postinstall-postinstall": "^2.1.0",
     "rome": "^10.0.4-beta",
-    "scripts": "./scripts",
+    "scripts": "link:./scripts",
     "typescript": "^4.1.3",
     "typesync": "^0.8.0"
   },

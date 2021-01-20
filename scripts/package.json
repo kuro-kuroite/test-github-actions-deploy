@@ -1,8 +1,11 @@
 {
   "name": "scripts",
-  "version": "0.0.0",
-  "license": "MIT",
-  "bin": "./build/cli.js",
+  "version": "0.1.0",
+	"license": "MIT",
+	"main": "./build/cli.js",
+  "bin": {
+		"scripts": "./build/cli.js"
+	},
   "engines": {
     "node": ">=8"
   },
