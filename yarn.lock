@@ -5465,9 +5465,12 @@ scheduler@^0.18.0:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
 
-"scripts@link:./scripts":
-  version "0.0.0"
-  uid ""
+scripts@./scripts:
+  version "0.1.0"
+  dependencies:
+    ink "^3.0.8"
+    pastel "^1.1.1"
+    react "^17.0.1"
 
 "semver@2 || 3 || 4 || 5", semver@^5.4.1, semver@^5.5.0, semver@^5.6.0:
   version "5.7.1"
