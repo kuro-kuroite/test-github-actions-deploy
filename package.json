@@ -4,7 +4,8 @@
   "private": true,
   "description": ".github/workflows/*.yml のサンドボックス環境",
   "repository": "https://github.com/kuro-kuroite/test-github-actions-deploy.git",
-  "license": "MIT",
+	"license": "MIT",
+	"bin": "./scripts/build/cli.js",
   "author": "@kuro-kuroite",
   "main": "dist/index.js",
   "scripts": {
