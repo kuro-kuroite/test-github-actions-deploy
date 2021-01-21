@@ -1,27 +1,19 @@
 import React, {FC} from "react";
 import {Box, Text} from "ink";
-import {command} from "../src/utils/command";
 
 export const PureHello: FC<PureProps> = ({robotName}) =>
-	<>
-		<Box flexDirection="column">
-			<Text>
-				こんにちは！私は
-				{robotName}
-				です。あなたの名前は何ですか？
-			</Text>
-			<Text>
-				Hello, I am
-				{robotName}
-				. What is your name?
-			</Text>
-		</Box>
-		<Box flexDirection="column">
-			<Text>
-				{command("npx rome check").stdout}
-			</Text>
-		</Box>
-	</>
+	<Box flexDirection="column">
+		<Text>
+			こんにちは！私は
+			{robotName}
+			です。
+		</Text>
+		<Text>
+			Hello, I am
+			{robotName}
+			.
+		</Text>
+	</Box>
 ;
 
 const Hello: FC<Props> = ({robotName}) => {

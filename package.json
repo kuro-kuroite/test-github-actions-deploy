@@ -7,6 +7,9 @@
   "license": "MIT",
   "author": "@kuro-kuroite",
   "main": "dist/index.js",
+  "engines": {
+    "node": ">=14"
+  },
   "scripts": {
     "build": "scripts build",
     "ci:check:format": "scripts check",
@@ -14,15 +17,21 @@
     "fix": "scripts fix",
     "postinstall": "npx patch-package && npx typesync",
     "lint": "scripts lint",
+    "scripts:dev": "cd scripts/ && npx pastel dev",
+    "scripts:build": "cd scripts/ && npx pastel build && npm link .",
+    "prepare": "npm run scripts:build",
     "serve": "scripts serve",
     "start": "scripts start",
     "test": "scripts test"
   },
   "devDependencies": {
+    "@types/react": "^17.0.0",
+    "ink": "^3.0.8",
+    "pastel": "^1.1.1",
     "patch-package": "^6.2.2",
     "postinstall-postinstall": "^2.1.0",
+    "react": "^17.0.1",
     "rome": "^10.0.4-beta",
-    "scripts": "file:./scripts",
     "typescript": "^4.1.3",
     "typesync": "^0.8.0"
   },
