@@ -13,24 +13,19 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: "14"
-      # - name: Get Yarn Cache Directory Path
-      #   id: yarn-cache-dir-path
-      #   run: echo "::set-output name=dir::$(yarn cache dir)"
-      # - name: Cache node_modules
-      #   uses: actions/cache@v2
-      #   with:
-      #     path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-      #     key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-      #     restore-keys: |
-      #       ${{ runner.os }}-yarn-
+      - name: Get Yarn Cache Directory Path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+      - name: Cache node_modules
+        uses: actions/cache@v2
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
       - name: Install npm
         run: |
           yarn --frozen-lockfile
-          ls node_modules/.bin
-          ls node_modules/scripts
-          ls node_modules/scripts/build
-          cat node_modules/scripts/build/cli.js
-          npx scripts
       # lint
       - name: Check Type
         run: |
