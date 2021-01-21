@@ -1,11 +1,11 @@
 import React, {VFC} from "react";
 import {Box, Text} from "ink";
-import {commandSync} from "../src/utils/command";
+import {exitCommandSync} from "../src/utils/command";
 
 export const PureFix: VFC<PureProps> = () =>
 	<Box flexDirection="column">
 		<Text>
-			{commandSync("npx rome check --apply").stdout}
+			{exitCommandSync("npx rome check --apply")}
 		</Text>
 	</Box>
 ;

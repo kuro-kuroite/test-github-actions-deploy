@@ -1,12 +1,12 @@
 import React, {VFC} from "react";
 import {Box, Text} from "ink";
-import {commandSync} from "../src/utils/command";
+import {exitCommandSync} from "../src/utils/command";
 
 export const PureCheckType: VFC<PureProps> = () =>
 	<Box flexDirection="column">
 		<Text>
-			{commandSync("tsc -p . --noEmit").stdout}
-			{commandSync("tsc -p ./scripts/ --noEmit").stdout}
+			{exitCommandSync("tsc -p . --noEmit")}
+			{exitCommandSync("tsc -p ./scripts/ --noEmit")}
 		</Text>
 	</Box>
 ;

@@ -13,5 +13,13 @@ export function command(_command: string): ChildProcess {
 }
 
 export function commandSync(_command: string) {
-	return _spawnSync(_command, [], {shell: true, stdio: "inherit"});
+	return _spawnSync(
+		_command,
+		[],
+		{shell: true, stdio: ["inherit", "inherit", "inherit"]},
+	);
+}
+
+export function exitCommandSync(_command: string) {
+	return process.exit(commandSync(_command).status ?? 0);
 }

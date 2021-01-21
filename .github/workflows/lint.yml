@@ -58,7 +58,6 @@ jobs:
             ${{ runner.os }}-yarn-
       - name: Install npm
         run: |
-          yarn -v
           yarn --frozen-lockfile
       # lint-mince
       - name: Lint Markdown

@@ -1,11 +1,11 @@
 import React, {VFC} from "react";
 import {Box, Text} from "ink";
-import {commandSync} from "../src/utils/command";
+import {exitCommandSync} from "../src/utils/command";
 
 export const PureBuild: VFC<PureProps> = () =>
 	<Box flexDirection="column">
 		<Text>
-			{commandSync("npx rome bundle ./src/index.ts dist/").stdout}
+			{exitCommandSync("npx rome bundle ./src/index.ts dist/")}
 		</Text>
 	</Box>
 ;
