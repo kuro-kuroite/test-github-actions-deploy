@@ -25,6 +25,8 @@ jobs:
       # install
       - name: Checkout
         uses: actions/checkout@v2
+        with:
+          persist-credentials: false
       - name: Use Node.js
         uses: actions/setup-node@v1
         with:
@@ -52,6 +54,7 @@ jobs:
           # NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           npx semantic-release
+          # npm run release
       - name: Deploy to Production
         run: |
           echo 'Deploy to Production'
