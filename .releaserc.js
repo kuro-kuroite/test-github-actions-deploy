@@ -5,13 +5,13 @@ module.exports = {
 		"@semantic-release/release-notes-generator",
 		"@semantic-release/changelog",
 		"@semantic-release/npm",
-		"@semantic-release/github",
 		[
 			"@semantic-release/exec",
 			{
-				"prepareCmd": "npx scripts fixReleases",
+				"prepareCmd": "pwd && ls && npx scripts fixReleases",
 			},
 		],
+		"@semantic-release/github",
 		"@semantic-release/git",
 	],
 };
