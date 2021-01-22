@@ -9,7 +9,7 @@ module.exports = {
 		[
 			"@semantic-release/exec",
 			{
-				"prepareCmd": "npm run fixReleases",
+				"prepareCmd": "npx scripts fixReleases",
 			},
 		],
 		"@semantic-release/git",
