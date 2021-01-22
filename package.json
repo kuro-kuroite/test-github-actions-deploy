@@ -1,26 +1,36 @@
 {
   "name": "test-github-actions-deploy",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "private": true,
   "description": ".github/workflows/*.yml のサンドボックス環境",
   "repository": "https://github.com/kuro-kuroite/test-github-actions-deploy.git",
   "license": "MIT",
   "author": "@kuro-kuroite",
   "main": "dist/index.js",
+  "engines": {
+    "node": ">=14"
+  },
   "scripts": {
-    "build": "rome bundle index.ts dist/",
-    "ci:check:format": "rome check",
-    "ci:check:type": "tsc -p . --noEmit",
-    "fix": "rome check --apply",
+    "build": "scripts build",
+    "ci:check:format": "scripts check",
+    "ci:check:type": "scripts checkType",
+    "fix": "scripts fix",
     "postinstall": "npx patch-package && npx typesync",
-    "lint": "rome check",
-    "serve": "node dist/index.js",
-    "start": "rome run index.ts",
-    "test": "rome test"
+    "lint": "scripts lint",
+    "scripts:dev": "cd scripts/ && npx pastel dev",
+    "scripts:build": "cd scripts/ && npx pastel build && npm link .",
+    "prepare": "npm run scripts:build",
+    "serve": "scripts serve",
+    "start": "scripts start",
+    "test": "echo test"
   },
   "devDependencies": {
+    "@types/react": "^17.0.0",
+    "ink": "^3.0.8",
+    "pastel": "^1.1.1",
     "patch-package": "^6.2.2",
     "postinstall-postinstall": "^2.1.0",
+    "react": "^17.0.1",
     "rome": "^10.0.4-beta",
     "typescript": "^4.1.3",
     "typesync": "^0.8.0"
