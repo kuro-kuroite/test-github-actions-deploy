@@ -5,7 +5,7 @@ import {exitCommandSync} from "../src/utils/command";
 export const PureFixReleases: VFC<PureProps> = () =>
 	<Box flexDirection="column">
 		<Text>
-			{exitCommandSync("npx rome check package.json CHANGELOG.md --apply")}
+			{exitCommandSync("npx rome check package.json --apply")}
 		</Text>
 	</Box>
 ;
