@@ -6,6 +6,12 @@ module.exports = {
 		"@semantic-release/changelog",
 		"@semantic-release/npm",
 		"@semantic-release/github",
+		[
+			"@semantic-release/exec",
+			{
+				"prepareCmd": "npm run fixReleases",
+			},
+		],
 		"@semantic-release/git",
 	],
 };
