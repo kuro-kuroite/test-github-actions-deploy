@@ -25,8 +25,8 @@ jobs:
       # install
       - name: Checkout
         uses: actions/checkout@v2
-        # with:
-        #   token: ${{ secrets.GH_TOKEN_SEMANTIC_RELEASE }}
+        with:
+          token: ${{ secrets.GH_TOKEN_SEMANTIC_RELEASE }}
       - name: Use Node.js
         uses: actions/setup-node@v1
         with:
