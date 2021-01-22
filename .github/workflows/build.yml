@@ -47,9 +47,12 @@ jobs:
         run: |
           npm run build
       - name: Create a Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
-          # npm run deploy
-          echo 'Create a Release'
+          npx semantic-release
       - name: Deploy to Production
         run: |
           echo 'Deploy to Production'
+          # npm run deploy
