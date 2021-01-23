@@ -32,7 +32,6 @@
 		"baseBranches": [
 			"main"
 		],
-		"masterIssue": true,
 		"rangeStrategy": "bump",
 		"supportPolicy": [
 			"lts_latest"
