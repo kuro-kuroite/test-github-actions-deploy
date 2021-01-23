@@ -1,48 +1,26 @@
 {
-	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
-	"extends": [
-		"config:base",
-		":timezone(Asia/Tokyo)"
+	"branchPrefix": "test-renovate/",
+	"dryRun": true,
+	"gitAuthor": "Renovate Bot <bot@renovateapp.com>",
+	"onboarding": false,
+	"platform": "github",
+	"includeForks": true,
+	"repositories": [
+		"kuro-kuroite/test-github-actions-deploy"
 	],
-	"postUpdateOptions": [
-		"yarnDedupeHighest"
-	],
-	"npm": {
-		"extends": [
-			"config:base",
-			"group:definitelyTyped",
-			"group:jsUnitTestNonMajor",
-			"github>hatena/renovate-config:groupLinters",
-			"group:allNonMajor",
-			":separateMultipleMajorReleases",
-			":automergeMinor",
-			":automergePr",
-			":automergeRequireAllStatusChecks",
-			":ignoreUnstable",
-			":enableVulnerabilityAlertsWithLabel(security)",
-			":labels(renovate,maintenance-bot)",
-			":assignees(kuro-kuroite)",
-			":assigneesSampleSize(1)",
-			":bumpVersion(minor)",
-			":maintainLockFilesWeekly",
-			":updateNotScheduled",
-			":semanticCommits",
-			"schedule:earlyMondays",
-			"helpers:followTypescriptNext"
-		],
-		"baseBranches": [
-			"main"
-		],
-		"rangeStrategy": "bump",
-		"supportPolicy": [
-			"lts_latest"
-		]
-	},
-	"branchPrefix": "renovate/",
-  "dryRun": true,
-  "gitAuthor": "Renovate Bot <bot@renovateapp.com>",
-  "onboarding": false,
-  "platform": "github",
-  "includeForks": true,
-	"repositories": ["kuro-kuroite/test-github-actions-deploy"]
+	"packageRules": [
+		{
+			"description": "lockFileMaintenance",
+			"updateTypes": [
+				"pin",
+				"digest",
+				"patch",
+				"minor",
+				"major",
+				"lockFileMaintenance"
+			],
+			"masterIssueApproval": false,
+			"stabilityDays": 0
+		}
+	]
 }
