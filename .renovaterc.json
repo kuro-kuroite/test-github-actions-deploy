@@ -38,5 +38,9 @@
 			"lts_latest"
 		]
 	},
-	"platform": "github"
+	"platform": "github",
+	"onboarding": false,
+	"includeForks": true,
+	"logLevel": "debug",
+	"dryRun": true
 }
