@@ -1,0 +1,44 @@
+{
+	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+	"extends": [
+		"config:base",
+		":timezone(Asia/Tokyo)"
+	],
+	"postUpdateOptions": [
+		"yarnDedupeHighest"
+	],
+	"npm": {
+		"extends": [
+			"group:definitelyTyped",
+			"group:jsUnitTestNonMajor",
+			"github>hatena/renovate-config:groupLinters",
+			"group:allNonMajor",
+			":separateMultipleMajorReleases",
+			":automergeMinor",
+			":automergePr",
+			":automergeRequireAllStatusChecks",
+			":ignoreUnstable",
+			":enableVulnerabilityAlertsWithLabel(security)",
+			":labels(renovate,maintenance-bot)",
+			":assignees(kuro-kuroite)",
+			":assigneesSampleSize(1)",
+			":bumpVersion(minor)",
+			":maintainLockFilesWeekly",
+			":updateNotScheduled",
+			":semanticCommits",
+			"schedule:earlyMondays",
+			"helpers:followTypescriptNext"
+		],
+		"baseBranches": [
+			"main"
+		],
+		"rangeStrategy": "bump",
+		"supportPolicy": [
+			"lts_latest"
+		]
+	},
+	"platform": "github",
+	"onboarding": false,
+	"includeForks": true,
+	"dryRun": true
+}
