@@ -9,6 +9,7 @@
 	],
 	"npm": {
 		"extends": [
+			"config:base",
 			"group:definitelyTyped",
 			"group:jsUnitTestNonMajor",
 			"github>hatena/renovate-config:groupLinters",
