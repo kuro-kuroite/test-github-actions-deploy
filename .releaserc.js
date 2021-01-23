@@ -14,4 +14,5 @@ module.exports = {
 		"@semantic-release/github",
 		"@semantic-release/git",
 	],
+	preset: "conventionalcommits",
 };
