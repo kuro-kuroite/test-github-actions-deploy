@@ -53,8 +53,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
-          npx semantic-release
-          # npm run release
+          npm run release
       - name: Deploy to Production
         run: |
           echo 'Deploy to Production'
