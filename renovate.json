@@ -2,20 +2,41 @@
 	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
 	"extends": [
 		"config:base",
+		":masterIssue",
+		":pinDependencies",
 		":timezone(Asia/Tokyo)"
 	],
+	"ignorePresets": [
+		":prHourlyLimit2"
+	],
+	"lockFileMaintenance": {
+		"enabled": true
+	},
+	"major": {
+		"stabilityDays": 3
+	},
 	"packageRules": [
 		{
-			"description": "lockFileMaintenance",
+			"description": "Auto-merge dependencies",
+			"depTypeList": [
+				"devDependencies",
+				"dependencies"
+			],
 			"updateTypes": [
 				"pin",
 				"digest",
 				"patch",
-				"minor",
-				"major",
-				"lockFileMaintenance"
+				"minor"
 			],
-			"stabilityDays": 0
+			"automerge": true
+		},
+		{
+			"packageNames": "renovatebot/github-action",
+			"extends": [
+				":semanticCommitType(fix)",
+				"schedule:weekly"
+			]
 		}
-	]
+	],
+	"prCreation": "not-pending"
 }
