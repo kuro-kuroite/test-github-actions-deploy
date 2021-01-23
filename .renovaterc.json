@@ -38,8 +38,11 @@
 			"lts_latest"
 		]
 	},
-	"platform": "github",
-	"onboarding": false,
-	"includeForks": true,
-	"dryRun": true
+	"branchPrefix": "renovate/",
+  "dryRun": true,
+  "gitAuthor": "Renovate Bot <bot@renovateapp.com>",
+  "onboarding": false,
+  "platform": "github",
+  "includeForks": true,
+	"repositories": ["kuro-kuroite/test-github-actions-deploy"]
 }
