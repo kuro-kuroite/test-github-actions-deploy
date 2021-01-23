@@ -40,6 +40,5 @@
 	"platform": "github",
 	"onboarding": false,
 	"includeForks": true,
-	"logLevel": "debug",
 	"dryRun": true
 }
