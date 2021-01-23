@@ -1,0 +1,21 @@
+{
+	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+	"extends": [
+		"config:base",
+		":timezone(Asia/Tokyo)"
+	],
+	"packageRules": [
+		{
+			"description": "lockFileMaintenance",
+			"updateTypes": [
+				"pin",
+				"digest",
+				"patch",
+				"minor",
+				"major",
+				"lockFileMaintenance"
+			],
+			"stabilityDays": 0
+		}
+	]
+}
