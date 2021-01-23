@@ -5,6 +5,7 @@ on:
   push:
     branches:
       - renovate
+      - main
 
 jobs:
   renovate:
