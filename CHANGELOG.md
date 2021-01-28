@@ -1,3 +1,12 @@
+### [1.2.2](https://github.com/kuro-kuroite/test-github-actions-deploy/compare/v1.2.1...v1.2.2) (2021-01-28)
+
+
+### Bug Fixes
+
+* ignore tag ([0bf6e2a](https://github.com/kuro-kuroite/test-github-actions-deploy/commit/0bf6e2af875df5a8a89b8d822c56f9f1f08747cf))
+* ignore tag ([51b5325](https://github.com/kuro-kuroite/test-github-actions-deploy/commit/51b5325a8ad6ffaf6245689143a4c8a52e287cb5))
+* ignore tag ([eccd66b](https://github.com/kuro-kuroite/test-github-actions-deploy/commit/eccd66bf6501ee29f8348568e74e32d8cd2cadb6))
+
 ### [1.2.1](https://github.com/kuro-kuroite/test-github-actions-deploy/compare/v1.2.0...v1.2.1) (2021-01-28)
 
 
