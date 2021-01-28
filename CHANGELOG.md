@@ -1,3 +1,11 @@
+### [1.1.2](https://github.com/kuro-kuroite/test-github-actions-deploy/compare/v1.1.1...v1.1.2) (2021-01-28)
+
+
+### Bug Fixes
+
+* add release script ([c879591](https://github.com/kuro-kuroite/test-github-actions-deploy/commit/c8795913e2fe3015a74452d54236514d69a5355d))
+* add release scripts ([5d298d6](https://github.com/kuro-kuroite/test-github-actions-deploy/commit/5d298d63c1c8f0b3601eb3d943fb6d2bf09cb7d1))
+
 ## [1.1.1](https://github.com/kuro-kuroite/test-github-actions-deploy/compare/v1.1.0...v1.1.1) (2021-01-22)
 
 
