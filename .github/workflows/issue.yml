@@ -4,7 +4,6 @@ on:
     workflows:
       - build
       - lighthouse
-      - renovate
     branches:
       - main
     types:
@@ -13,8 +12,8 @@ on:
 jobs:
   create:
     runs-on: ubuntu-latest
+    if: github.event.workflow_run.conclusion == 'failure'
     steps:
       - name: Create Issue if the Workflows was Failed
-        if: github.event.workflow_run.conclusion == 'failure'
         run: |
           echo "Create Issue"
