@@ -6,7 +6,7 @@ charset = utf-8
 indent_style = tab
 indent_size = 2
 
-[*.yml]
+[{package.json,*.yml}]
 indent_style = space
 
 [COMMIT_EDITMSG]

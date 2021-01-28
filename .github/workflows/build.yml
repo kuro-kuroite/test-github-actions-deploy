@@ -11,7 +11,8 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    if: github.event.workflow_run.conclusion == 'success'
+    # FYI: semantic-release (chore(release): x.x.x [skip ci])
+    if: github.event.workflow_run.conclusion == 'skipped'
     steps:
       # install
       - name: Checkout
