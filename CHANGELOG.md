@@ -1,3 +1,10 @@
+### [1.2.3](https://github.com/kuro-kuroite/test-github-actions-deploy/compare/v1.2.2...v1.2.3) (2021-01-28)
+
+
+### Bug Fixes
+
+* add comment of skipped ([e2d0aee](https://github.com/kuro-kuroite/test-github-actions-deploy/commit/e2d0aeee5e0b253ae3484c0cb2f0a786eb6a3094))
+
 ### [1.2.2](https://github.com/kuro-kuroite/test-github-actions-deploy/compare/v1.2.1...v1.2.2) (2021-01-28)
 
 
