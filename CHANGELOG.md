@@ -1,3 +1,10 @@
+### [1.2.1](https://github.com/kuro-kuroite/test-github-actions-deploy/compare/v1.2.0...v1.2.1) (2021-01-28)
+
+
+### Bug Fixes
+
+* remove renovate workflow ([2c1da4a](https://github.com/kuro-kuroite/test-github-actions-deploy/commit/2c1da4a535f6f9e431dd47397eeb0d7e04fc8d13))
+
 ## [1.2.0](https://github.com/kuro-kuroite/test-github-actions-deploy/compare/v1.1.2...v1.2.0) (2021-01-28)
 
 
