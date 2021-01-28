@@ -20,6 +20,7 @@
     "scripts:dev": "cd scripts/ && npx pastel dev",
     "scripts:build": "cd scripts/ && npx pastel build && npm link .",
     "prepare": "npm run scripts:build",
+    "release": "scripts release",
     "serve": "scripts serve",
     "start": "scripts start",
     "test": "echo test"
