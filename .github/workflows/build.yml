@@ -9,11 +9,6 @@ on:
       - completed
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - run:
-          echo "${{ toJson(github) }}""
   deploy:
     runs-on: ubuntu-latest
     # FYI: semantic-release (chore(release): x.x.x [skip ci])
