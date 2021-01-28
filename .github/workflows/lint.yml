@@ -1,6 +1,9 @@
 name: lint
 on:
-  - push
+  push:
+    tags-ignore:
+      - v*
+      - v*.*.*
 
 jobs:
   lint:
