@@ -1,6 +1,11 @@
 name: lint
 on:
-  - push
+  push:
+    branches:
+      - '**'
+    tags-ignore:
+      - 'v*'
+      - 'v*.*.*'
 
 jobs:
   lint:
