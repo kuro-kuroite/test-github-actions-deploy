@@ -9,18 +9,9 @@ on:
       - completed
 
 jobs:
-  can-deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Make Fail if the Workflows Was Failed
-        if: github.event.workflow_run.conclusion != 'success'
-        run: |
-          echo '::error::the workflows was failed'
-          exit 1
   deploy:
     runs-on: ubuntu-latest
-    needs:
-      - can-deploy
+    if: github.event.workflow_run.conclusion == 'success'
     steps:
       # install
       - name: Checkout
