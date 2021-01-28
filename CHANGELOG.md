@@ -1,3 +1,10 @@
+## [1.2.0](https://github.com/kuro-kuroite/test-github-actions-deploy/compare/v1.1.2...v1.2.0) (2021-01-28)
+
+
+### Features
+
+* add skip ci ([90d50c5](https://github.com/kuro-kuroite/test-github-actions-deploy/commit/90d50c5c9a5efa064e0a0bd4c7b72b0550162737))
+
 ### [1.1.2](https://github.com/kuro-kuroite/test-github-actions-deploy/compare/v1.1.1...v1.1.2) (2021-01-28)
 
 
