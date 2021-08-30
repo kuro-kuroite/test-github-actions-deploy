@@ -8,7 +8,7 @@
   "author": "@kuro-kuroite",
   "main": "dist/index.js",
   "engines": {
-    "node": ">=v14.17.4"
+    "node": ">=v14.17.5"
   },
   "scripts": {
     "build": "scripts build",
@@ -29,7 +29,7 @@
     "@semantic-release/changelog": "^5.0.1",
     "@semantic-release/exec": "^5.0.0",
     "@semantic-release/git": "^9.0.0",
-    "@types/react": "^17.0.15",
+    "@types/react": "^17.0.19",
     "@types/semantic-release": "^17.2.1",
     "conventional-changelog-conventionalcommits": "^4.6.0",
     "ink": "^3.0.9",
@@ -38,8 +38,8 @@
     "postinstall-postinstall": "^2.1.0",
     "react": "^17.0.2",
     "rome": "^10.0.4-beta",
-    "semantic-release": "^17.4.4",
-    "typescript": "^4.3.5",
+    "semantic-release": "^17.4.7",
+    "typescript": "^4.4.2",
     "typesync": "^0.8.0"
   },
   "$schema": "https://json.schemastore.org/package"
