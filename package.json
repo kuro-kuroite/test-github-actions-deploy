@@ -26,9 +26,9 @@
     "test": "echo test"
   },
   "devDependencies": {
-    "@semantic-release/changelog": "^5.0.1",
-    "@semantic-release/exec": "^5.0.0",
-    "@semantic-release/git": "^9.0.1",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/exec": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
     "@types/react": "^17.0.56",
     "@types/semantic-release": "^17.2.6",
     "conventional-changelog-conventionalcommits": "^4.6.3",
@@ -38,7 +38,7 @@
     "postinstall-postinstall": "^2.1.0",
     "react": "^17.0.2",
     "rome": "^10.0.4-beta",
-    "semantic-release": "^17.4.7",
+    "semantic-release": "^21.0.1",
     "typescript": "^4.9.5",
     "typesync": "^0.10.0"
   },
