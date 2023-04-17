@@ -36,7 +36,7 @@
     "pastel": "^1.1.1",
     "patch-package": "^6.5.1",
     "postinstall-postinstall": "^2.1.0",
-    "react": "^17.0.2",
+    "react": "^18.2.0",
     "rome": "^10.0.4-beta",
     "semantic-release": "^17.4.7",
     "typescript": "^4.9.5",
